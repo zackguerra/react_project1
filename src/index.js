@@ -1,17 +1,41 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import Header from "./components/Header";
+import Webprojects from "./components/Webprojects";
+import Skills from "./components/Skills"
+import Contact from "./components/Contact"
+import CertificatesAndExperience from "./components/CertificatesAndExperience"
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+import "./styles.css";
+import GameDevProjects from "./components/GameDevProjects";
+
+function App() {
+  return (
+    <div className="App">      
+      <Header />
+      <hr />      
+      <Webprojects />
+      <br />
+      <hr />
+      <br />
+      <GameDevProjects />
+      <br />
+      <hr />
+      <br />
+      <Skills />
+      <br />
+      <hr />
+      <br />
+      <CertificatesAndExperience />
+      <br />
+      <hr />
+      <br />
+      <Contact />
+    </div>    
+  );
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
